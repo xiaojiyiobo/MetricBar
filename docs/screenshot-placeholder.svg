@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+  <rect width="900" height="220" fill="#111827"/>
+  <rect x="24" y="24" width="852" height="124" rx="10" fill="#1f2937" stroke="#4b5563"/>
+  <text x="450" y="72" text-anchor="middle" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="20">Screenshot / GIF placeholder</text>
+  <text x="450" y="116" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="30" font-weight="600">↓2.5M   ↑1.1M   CPU 16.4%</text>
+  <text x="450" y="190" text-anchor="middle" fill="#6b7280" font-family="Segoe UI, sans-serif" font-size="16">Replace with a real Windows 10 taskbar capture before release</text>
+</svg>

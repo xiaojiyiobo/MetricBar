@@ -1,0 +1,30 @@
+# Build outputs
+/build/
+/out/
+/x64/
+/Debug/
+/Release/
+/.vs/
+/.vscode/
+*.dll
+*.exe
+*.res
+*.o
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.tar.gz
+*.sha256
+band-preview.*
+package/
+
+# Local/editor files
+*.user
+*.suo
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
