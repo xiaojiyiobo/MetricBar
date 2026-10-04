@@ -4,7 +4,7 @@
 
 **鎶婁换鎰?JSON 鎺ュ彛鐨勬寚鏍囷紝浠ュ疄鏃舵枃瀛楃洿鎺ユ樉绀哄湪 Windows 10 浠诲姟鏍忎笂銆?*
 
-![鎴浘鍗犱綅](docs/screenshot-placeholder.svg)
+![MetricBar \u5b9e\u9645\u6548\u679c](docs/screenshot.png)
 
 > 鎴浘/GIF 鍗犱綅锛氬彂甯?GitHub Release 鍓嶏紝璇锋崲鎴?Windows 10 浠诲姟鏍忕殑瀹為檯鎴浘鎴栧綍灞忋€?
 ## 鍔熻兘鐗规€?
