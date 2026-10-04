@@ -1,19 +1,19 @@
 # MetricBar
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[English](README.md) | [绠€浣撲腑鏂嘳(README.zh-CN.md)
 
 **Show metrics from any JSON endpoint as live text in the Windows 10 taskbar.**
 
-![Screenshot placeholder](docs/screenshot-placeholder.svg)
+![MetricBar in the Windows 10 taskbar](docs/screenshot.png)
 
-> Screenshot/GIF placeholder: replace this image with a capture from a Windows 10 taskbar before publishing a release.
+
 
 ## Features
 
 - Native x64 Windows DeskBand: metrics appear directly in the taskbar, not in a tiny tray icon.
 - Flattens nested JSON into dot paths such as `status.online` and array paths such as `items.0.value`.
 - Configurable metric order, templates, separators, and raw/byte formatting.
-- Derives `net.down` and `net.up` from a legacy `vps_net` value such as `↑2.7Mbps ↓2.5Mbps`.
+- Derives `net.down` and `net.up` from a legacy `vps_net` value such as `鈫?.7Mbps 鈫?.5Mbps`.
 - A missing or malformed field renders as `--` without affecting other metrics.
 - Without a `[Metrics]` section, the component falls back to the V2 `DisplayMode` behavior.
 - WinHTTP polling runs on a background thread with an 8-second timeout and exception isolation.
@@ -57,12 +57,12 @@ Separator=
 
 [M1]
 Path=net.down
-Template=↓{value}
+Template=鈫搟value}
 Format=raw
 
 [M2]
 Path=net.up
-Template=↑{value}
+Template=鈫憑value}
 Format=raw
 
 [M3]
@@ -71,7 +71,7 @@ Template=CPU {value}%
 Format=raw
 ```
 
-This renders `↓2.5M ↑1.1M CPU 16.4%` for the sample payload.
+This renders `鈫?.5M 鈫?.1M CPU 16.4%` for the sample payload.
 
 ### Metric settings
 
@@ -80,13 +80,13 @@ This renders `↓2.5M ↑1.1M CPU 16.4%` for the sample payload.
 - `Path`: flattened field name. Nested objects use dots; arrays use numeric segments.
 - `Template`: replaces every `{value}` token with the formatted field. An invalid template falls back to a safe default.
 - `Format=raw`: preserves JSON strings and number text.
-- `Format=bytes`: converts numeric byte values using 1024-based units and one decimal place: `1536` → `1.5K`, `2097152` → `2.0M`.
+- `Format=bytes`: converts numeric byte values using 1024-based units and one decimal place: `1536` 鈫?`1.5K`, `2097152` 鈫?`2.0M`.
 
 Top-level scalar JSON values are available as `$`. Boolean and null leaves render as `true`, `false`, and `null`. Missing fields and non-numeric values used with `bytes` render as `--`.
 
 ### V2 fallback
 
-Delete the complete `[Metrics]` section and all `[M1]`, `[M2]`, … groups to use the original `DisplayMode=download|upload|both` rendering of `vps_net`. The older `[TaskbarJsonMonitor]` and `[VpsTraySpeed]` main sections are still accepted for upgrade compatibility; new configurations should use `[MetricBar]`.
+Delete the complete `[Metrics]` section and all `[M1]`, `[M2]`, 鈥?groups to use the original `DisplayMode=download|upload|both` rendering of `vps_net`. The older `[TaskbarJsonMonitor]` and `[VpsTraySpeed]` main sections are still accepted for upgrade compatibility; new configurations should use `[MetricBar]`.
 
 ## Third-party JSON examples
 
@@ -133,7 +133,7 @@ Separator="  "
 
 [M1]
 Path=current.temperature_2m
-Template={value}°C
+Template={value}掳C
 Format=raw
 
 [M2]
@@ -169,9 +169,9 @@ The build runs parser/metric tests, COM contract tests, an unregistered DeskBand
 
 Naming history:
 
-1. **MetricBar** — selected: short, memorable, and appropriate for a taskbar metric strip.
-2. **JsonTaskbar** — explicit about JSON but less clear about monitoring.
-3. **TaskbarJsonMonitor** — descriptive, but rejected because it is too long.
+1. **MetricBar** 鈥?selected: short, memorable, and appropriate for a taskbar metric strip.
+2. **JsonTaskbar** 鈥?explicit about JSON but less clear about monitoring.
+3. **TaskbarJsonMonitor** 鈥?descriptive, but rejected because it is too long.
 
 ## Publishing
 
